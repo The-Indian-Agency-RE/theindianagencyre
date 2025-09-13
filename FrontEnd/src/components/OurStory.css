@@ -1,0 +1,14 @@
+.animated-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #2563eb; /* Blue underline */
+  margin: 8px auto 0;
+  transition: width 0.4s ease-in-out;
+}
+
+.animated-title:hover::after {
+  width: 100%;
+}
+  

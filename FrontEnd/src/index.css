@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Newsreader', sans-serif;
+}
+/* Prevent Leaflet map from overlapping navbar */
+.leaflet-container {
+  z-index: 0 !important;
+}
+
+.navbar {
+  z-index: 1000 !important;
+  position: relative;
+}
+  
