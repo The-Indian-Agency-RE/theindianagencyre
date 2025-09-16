@@ -1,0 +1,367 @@
+[
+  {
+    "id": "1",
+    "title": "Luxury Villa in Banjara Hills",
+    "location": "Banjara Hills, Hyderabad",
+    "price": "2,50,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": "3500 sqft",
+    "description": "A beautiful luxury villa with modern amenities, spacious rooms, and excellent connectivity to the city center. Perfect for families looking for premium living.",
+    "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Swimming Pool", "Gym", "Parking", "Security"],
+    "coordinates": { "lat": 17.4167, "lng": 78.4667 }
+  },
+  {
+    "id": "2",
+    "title": "Modern Apartment in Gachibowli",
+    "location": "Gachibowli, Hyderabad",
+    "price": "85,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": "1200 sqft",
+    "description": "A contemporary apartment in the IT hub of Hyderabad with excellent infrastructure and close to major tech companies.",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Gym", "Parking", "24/7 Security"],
+    "coordinates": { "lat": 17.4435, "lng": 78.3420 }
+  },
+  {
+    "id": "3",
+    "title": "Spacious House for Rent in Jubilee Hills",
+    "location": "Jubilee Hills, Hyderabad",
+    "price": "45,000",
+    "type": "rent",
+    "category": "residential",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": "2000 sqft",
+    "description": "A well-maintained house in the upscale Jubilee Hills area, perfect for families. Close to schools and shopping centers.",
+    "image": "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Parking", "Garden", "Security"],
+    "coordinates": { "lat": 17.4312, "lng": 78.4079 }
+  },
+  {
+    "id": "4",
+    "title": "Commercial Office Space in Hitec City",
+    "location": "Hitec City, Hyderabad",
+    "price": "1,20,00,000",
+    "type": "sale",
+    "category": "commercial",
+    "area": "2500 sqft",
+    "description": "Prime commercial office space in the heart of Hitec City, ideal for IT companies and startups. Fully furnished with modern facilities.",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Elevator", "Parking", "Conference Rooms", "Cafeteria"],
+    "coordinates": { "lat": 17.4474, "lng": 78.3815 }
+  },
+  {
+    "id": "5",
+    "title": "Budget Apartment in Kukatpally",
+    "location": "Kukatpally, Hyderabad",
+    "price": "55,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": "900 sqft",
+    "description": "An affordable apartment in a well-connected area with good transportation links and nearby amenities.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Parking", "Security"],
+    "coordinates": { "lat": 17.4840, "lng": 78.4080 }
+  },
+  {
+    "id": "6",
+    "title": "Penthouse in Madhapur",
+    "location": "Madhapur, Hyderabad",
+    "price": "3,75,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "area": "4500 sqft",
+    "description": "Luxurious penthouse with panoramic city views, premium finishes, and world-class amenities in the IT corridor.",
+    "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Swimming Pool", "Gym", "Spa", "Concierge", "Parking"],
+    "coordinates": { "lat": 17.4485, "lng": 78.3908 }
+  },
+  {
+    "id": "7",
+    "title": "Cozy Studio for Rent near Ameerpet",
+    "location": "Ameerpet, Hyderabad",
+    "price": "15,000",
+    "type": "rent",
+    "category": "residential",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": "450 sqft",
+    "description": "Perfect studio apartment for young professionals and students. Close to metro station and training institutes.",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Furnished", "WiFi", "Security"],
+    "coordinates": { "lat": 17.4374, "lng": 78.4482 }
+  },
+  {
+    "id": "8",
+    "title": "Retail Shop in Begumpet",
+    "location": "Begumpet, Hyderabad",
+    "price": "80,00,000",
+    "type": "sale",
+    "category": "commercial",
+    "area": "800 sqft",
+    "description": "Prime retail space in busy commercial area with high foot traffic. Ideal for shops, boutiques, or showrooms.",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Street Parking", "High Visibility"],
+    "coordinates": { "lat": 17.4399, "lng": 78.4682 }
+  },
+  {
+    "id": "9",
+    "title": "Family Villa in Kompally",
+    "location": "Kompally, Hyderabad",
+    "price": "1,25,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "area": "2200 sqft",
+    "description": "Independent villa in a peaceful residential area with good ventilation and natural lighting throughout.",
+    "image": "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Garden", "Parking", "Bore Well"],
+    "coordinates": { "lat": 17.5454, "lng": 78.4896 }
+  },
+  {
+    "id": "10",
+    "title": "Luxury Apartment for Rent in Kondapur",
+    "location": "Kondapur, Hyderabad",
+    "price": "35,000",
+    "type": "rent",
+    "category": "residential",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": "1400 sqft",
+    "description": "High-end apartment with modern furnishing and excellent amenities in the growing suburb of Kondapur.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Swimming Pool", "Gym", "Clubhouse", "Parking"],
+    "coordinates": { "lat": 17.4616, "lng": 78.3633 }
+  },
+  {
+    "id": "11",
+    "title": "Warehouse in Shamshabad",
+    "location": "Shamshabad, Hyderabad",
+    "price": "2,00,00,000",
+    "type": "sale",
+    "category": "commercial",
+    "area": "10000 sqft",
+    "description": "Large warehouse facility near the airport, perfect for logistics and distribution businesses.",
+    "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Loading Dock", "Security", "Fire Safety"],
+    "coordinates": { "lat": 17.2403, "lng": 78.4294 }
+  },
+  {
+    "id": "12",
+    "title": "Duplex House in Miyapur",
+    "location": "Miyapur, Hyderabad",
+    "price": "95,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "area": "1800 sqft",
+    "description": "Beautiful duplex house with separate floors, ideal for joint families or rental income generation.",
+    "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Parking", "Balcony", "Security"],
+    "coordinates": { "lat": 17.5123, "lng": 78.3588 }
+  },
+  {
+    "id": "13",
+    "title": "Affordable Flat in LB Nagar",
+    "location": "LB Nagar, Hyderabad",
+    "price": "42,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": "850 sqft",
+    "description": "Well-connected affordable housing option with metro connectivity and good infrastructure development.",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Metro Nearby", "Parking", "Security"],
+    "coordinates": { "lat": 17.3520, "lng": 78.5526 }
+  },
+  {
+    "id": "14",
+    "title": "Office Space for Rent in Financial District",
+    "location": "Financial District, Hyderabad",
+    "price": "80,000",
+    "type": "rent",
+    "category": "commercial",
+    "area": "1500 sqft",
+    "description": "Premium office space in the heart of Financial District with state-of-the-art facilities and infrastructure.",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Furnished", "High-Speed Internet", "Parking", "Security"],
+    "coordinates": { "lat": 17.4167, "lng": 78.3833 }
+  },
+  {
+    "id": "15",
+    "title": "Garden Villa in Shamirpet",
+    "location": "Shamirpet, Hyderabad",
+    "price": "1,80,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": "3000 sqft",
+    "description": "Serene villa surrounded by greenery, perfect for those seeking a peaceful lifestyle away from city chaos.",
+    "image": "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Large Garden", "Parking", "Bore Well", "Security"],
+    "coordinates": { "lat": 17.6590, "lng": 78.4687 }
+  },
+  {
+    "id": "16",
+    "title": "Furnished Apartment in Tolichowki",
+    "location": "Tolichowki, Hyderabad",
+    "price": "25,000",
+    "type": "rent",
+    "category": "residential",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": "650 sqft",
+    "description": "Fully furnished apartment ready to move in, perfect for working professionals and students.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Fully Furnished", "AC", "WiFi", "Parking"],
+    "coordinates": { "lat": 17.3969, "lng": 78.4088 }
+  },
+  {
+    "id": "17",
+    "title": "Commercial Complex in Secunderabad",
+    "location": "Secunderabad, Hyderabad",
+    "price": "5,00,00,000",
+    "type": "sale",
+    "category": "commercial",
+    "area": "8000 sqft",
+    "description": "Multi-story commercial complex in the business district with multiple rental opportunities.",
+    "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Elevator", "Parking", "24/7 Security", "Generator Backup"],
+    "coordinates": { "lat": 17.5040, "lng": 78.5044 }
+  },
+  {
+    "id": "18",
+    "title": "Row House in Bachupally",
+    "location": "Bachupally, Hyderabad",
+    "price": "75,00,000",
+    "type": "sale",
+    "category": "residential",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": "1300 sqft",
+    "description": "Modern row house in a gated community with excellent amenities and peaceful environment.",
+    "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Gated Community", "Playground", "Parking", "Security"],
+    "coordinates": { "lat": 17.5500, "lng": 78.3200 }
+  },
+  {
+    "id": "19",
+    "title": "Luxury Flat for Rent in Film Nagar",
+    "location": "Film Nagar, Hyderabad",
+    "price": "55,000",
+    "type": "rent",
+    "category": "residential",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": "1800 sqft",
+    "description": "Premium apartment in the upscale Film Nagar area, known for its celebrity residents and luxury lifestyle.",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Swimming Pool", "Gym", "Clubhouse", "Valet Parking"],
+    "coordinates": { "lat": 17.4185, "lng": 78.4068 }
+  },
+  {
+    "id": "20",
+    "title": "Industrial Plot in Patancheru",
+    "location": "Patancheru, Hyderabad",
+    "price": "3,50,00,000",
+    "type": "sale",
+    "category": "commercial",
+    "area": "15000 sqft",
+    "description": "Large industrial plot suitable for manufacturing units and industrial development projects.",
+    "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=400&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop"
+    ],
+    "amenities": ["Industrial Zone", "Road Access", "Power Supply"],
+    "coordinates": { "lat": 17.5338, "lng": 78.2663 }
+  }
+]
