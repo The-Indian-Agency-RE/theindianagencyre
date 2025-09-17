@@ -76,7 +76,7 @@ const services = [
 export default function Services() {
   const router = useRouter();
 
-  const handleServiceClick = (servicePath) => {
+  const handleServiceClick = (servicePath: string) => {
     router.push(servicePath);
   };
 

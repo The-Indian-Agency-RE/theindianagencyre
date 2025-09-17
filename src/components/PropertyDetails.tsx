@@ -5,20 +5,21 @@ import { useParams } from "next/navigation";
 import propertyService from "../lib/propertyService";
 import Slider from "react-slick";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import { Property } from "@/types/property";
 
 const PropertyDetails = () => {
   const { id } = useParams();
-  const [property, setProperty] = useState(null);
+  const [property, setProperty] = useState<Property | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   // Calculator states
   const [loanAmount, setLoanAmount] = useState("");
   const [interestRate, setInterestRate] = useState("8.5");
   const [tenure, setTenure] = useState("20");
-  const [emi, setEmi] = useState(null);
-  const [totalCost, setTotalCost] = useState(null);
-  const [totalInterest, setTotalInterest] = useState(null);
+  const [emi, setEmi] = useState<string | null>(null);
+  const [totalCost, setTotalCost] = useState<string | null>(null);
+  const [totalInterest, setTotalInterest] = useState<string | null>(null);
 
   // Contact form states
   const [contactForm, setContactForm] = useState({
@@ -30,8 +31,9 @@ const PropertyDetails = () => {
 
   // Google Maps loader
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""
   });
+  console.log("api is :" ,process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)
 
   // Fetch property and auto-fill loan amount
   useEffect(() => {
@@ -39,7 +41,11 @@ const PropertyDetails = () => {
       try {
         setLoading(true);
         const propertyData = await propertyService.getPropertyById(id);
-        setProperty(propertyData);
+        setProperty({
+          ...propertyData,
+          type: propertyData.type as "sale" | "rent",
+          features: (propertyData as any).features || propertyData.amenities || []
+        } as Property);
         // Clean price string and set as loan amount
         const cleanPrice = propertyData.price?.replace(/[₹,\s]/g, '') || "";
         setLoanAmount(cleanPrice);
@@ -83,7 +89,7 @@ const PropertyDetails = () => {
     }
   }, [loanAmount, interestRate, tenure]);
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     // Handle form submission here
     console.log("Contact form submitted:", contactForm);
@@ -91,12 +97,14 @@ const PropertyDetails = () => {
     setContactForm({ name: "", email: "", phone: "", message: "" });
   };
 
-  const handleContactChange = (field, value) => {
+  const handleContactChange = (field: string, value: string) => {
     setContactForm(prev => ({ ...prev, [field]: value }));
   };
 
-  const formatNumber = (num) => {
-    return new Intl.NumberFormat('en-IN').format(num);
+  const formatNumber = (num: string | number | bigint | null) => {
+    if (num === null) return '0';
+    const numericValue = typeof num === 'string' ? parseFloat(num) : num;
+    return new Intl.NumberFormat('en-IN').format(numericValue);
   };
 
   if (loading) {
@@ -212,6 +220,7 @@ const PropertyDetails = () => {
               <div className="h-80 border border-slate-200">
                 {isLoaded ? (
                   <GoogleMap
+
                     mapContainerStyle={{ width: "100%", height: "100%" }}
                     center={coordinates}
                     zoom={15}
@@ -353,7 +362,7 @@ const PropertyDetails = () => {
                     Message
                   </label>
                   <textarea
-                    rows="4"
+                    rows={4}
                     value={contactForm.message}
                     onChange={(e) => handleContactChange('message', e.target.value)}
                     className="w-full border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:border-slate-500 transition-colors resize-none"
@@ -376,7 +385,7 @@ const PropertyDetails = () => {
               <div className="bg-white border border-slate-200 p-6">
                 <h3 className="text-lg font-medium text-slate-900 mb-6">Key Features</h3>
                 <div className="space-y-3">
-                  {property.features.map((feature, index) => (
+                  {property.features.map((feature: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-slate-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-slate-700">{feature}</span>

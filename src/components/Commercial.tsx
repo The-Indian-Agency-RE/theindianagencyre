@@ -81,7 +81,7 @@ const Commercial = () => {
     ? listings 
     : listings.filter(listing => listing.type === filter);
 
-  const handleContactClick = (propertyId) => {
+  const handleContactClick = (propertyId: number) => {
     router.push(`/contact?property=${propertyId}&type=commercial`);
   };
 

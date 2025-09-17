@@ -1,9 +1,13 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaArrowRight, FaPlay } from 'react-icons/fa';
 
-const FeaturedProperties = () => {
-  const properties = [
+
+const FeaturedProperties= ({ initialProperties}: { initialProperties: any[] }) => {
+  // Fallback static properties
+  const fallbackProperties = [
     {
       id: 1,
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
@@ -36,19 +40,12 @@ const FeaturedProperties = () => {
       bedrooms: 3,
       bathrooms: 2,
       area: '2,400 sq ft'
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914',
-      title: 'Penthouse Suite',
-      location: 'Beverly Hills, CA',
-      price: '$3,900,000',
-      type: 'For Sale',
-      bedrooms: 4,
-      bathrooms: 3,
-      area: '3,600 sq ft'
-    },
+    }
   ];
+
+  // Use server-provided properties if available, otherwise use fallback
+  const properties = initialProperties.length > 0 ? initialProperties : fallbackProperties;
+  
 
   return (
     <section id="featured" className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -72,7 +69,7 @@ const FeaturedProperties = () => {
 
         {/* Properties Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {properties.map((property) => (
+          {properties.map((property: { id: React.Key | null | undefined; image: string | undefined; title: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | Promise<React.AwaitedReactNode> | null | undefined; type: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; location: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; bedrooms: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; bathrooms: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; area: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; price: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; }) => (
             <div
               key={property.id}
               className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3"
@@ -80,7 +77,7 @@ const FeaturedProperties = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={property.image}
-                  alt={property.title}
+                  alt={String(property.title || 'Property')}
                   className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 

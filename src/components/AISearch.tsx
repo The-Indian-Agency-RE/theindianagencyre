@@ -2,10 +2,12 @@
 
 import React, { useState } from 'react';
 import propertyService from '../lib/propertyService';
+import { Property } from '@/types/property';
+
 
 const AISearch = () => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<Property[]>([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -20,8 +22,11 @@ const AISearch = () => {
 
     try {
       const properties = await propertyService.searchProperties(query);
-      setResults(properties);
-      if (properties.length === 0) {
+      const validProperties = properties.filter(p => 
+        p.type === 'sale' || p.type === 'rent'
+      ) as Property[];
+      setResults(validProperties);
+      if (validProperties.length === 0) {
         setError('No properties found matching your criteria');
       }
     } catch (err) {

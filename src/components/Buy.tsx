@@ -22,8 +22,8 @@ const center = {
 };
 
 const Buy = () => {
-  const [properties, setProperties] = useState([]);
-  const [selectedProperty, setSelectedProperty] = useState(null);
+  const [properties, setProperties] = useState<any[]>([]);
+  const [selectedProperty, setSelectedProperty] = useState<any>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const Buy = () => {
                 <h3 className="text-lg font-semibold">Interactive Map View</h3>
               </div>
               <div className="h-[600px] bg-slate-100">
-                <LoadScript googleMapsApiKey="AIzaSyAZl50D1RFVs5ZjiIMr9jxqCgMTFbHAc7Q">
+                <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
                   <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={center}

@@ -5,8 +5,8 @@ const EmiCalculator = () => {
   const [downPayment, setDownPayment] = useState(500000); // default ₹5 Lakh
   const [rate, setRate] = useState(8.5); // annual interest rate in %
   const [years, setYears] = useState(20); // default 20 years
-  const [emi, setEmi] = useState(null);
-  const [totalCost, setTotalCost] = useState(null);
+  const [emi, setEmi] = useState<number | null>(null);
+  const [totalCost, setTotalCost] = useState<number | null>(null);
 
   const calculateEMI = () => {
     const loanAmount = price - downPayment;
@@ -65,7 +65,7 @@ const EmiCalculator = () => {
         </button>
       </div>
 
-      {emi !== null && (
+      {emi !== null && totalCost !== null && (
         <div className="mt-6 p-4 bg-gray-50 rounded-lg shadow-inner transition">
           <p className="text-lg font-semibold text-gray-700">Monthly EMI: ₹{emi.toLocaleString()}</p>
           <p className="text-lg font-semibold text-gray-700">

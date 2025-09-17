@@ -9,7 +9,7 @@ const Login = () => {
   const [message, setMessage] = useState("");
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setMessage("");
 

@@ -4,9 +4,10 @@ import React, { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import propertyService from "../lib/propertyService";
+import { Property } from "@/types/property";
 
 const AllPropertiesContent = () => {
-  const [properties, setProperties] = useState([]);
+  const [properties, setProperties] = useState<Property[]>([]);
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -14,7 +15,12 @@ const AllPropertiesContent = () => {
     const searchQuery = searchParams.get("search") || "";
 
     propertyService.getProperties({ search: searchQuery })
-      .then((fetchedProperties) => setProperties(fetchedProperties))
+      .then((fetchedProperties) => {
+        const validProperties = fetchedProperties.filter((p: any) => 
+          p.type === 'sale' || p.type === 'rent'
+        ) as Property[];
+        setProperties(validProperties);
+      })
       .catch((err) => console.error(err));
   }, [searchParams]);
 
@@ -23,7 +29,7 @@ const AllPropertiesContent = () => {
   };
 
   return (
-    <div className="p-8 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 min-h-screen">
+    <div className="p-8 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 min-h-screen py-28">
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
         <h2 className="text-4xl font-extrabold text-gray-800 tracking-tight flex items-center gap-2">

@@ -17,12 +17,25 @@ import {
 } from 'react-icons/fa';
 import Link from 'next/link';
 
+// Define proper TypeScript interfaces
+interface Property {
+  _id: string;
+  title: string;
+  location: string;
+  price: string | number;
+  type: 'sale' | 'rent';
+  bedrooms?: number | null;
+  bathrooms?: number | null;
+  area: string;
+  image: string;
+}
+
 const Footer = () => {
-  const [featuredProperties, setFeaturedProperties] = useState([]);
+  const [featuredProperties, setFeaturedProperties] = useState<Property[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Mock data for featured properties
-  const mockProperties = [
+  const mockProperties: Property[] = [
     {
       _id: '1',
       title: 'Luxury Villa in Hyderabad',
@@ -61,11 +74,25 @@ const Footer = () => {
   useEffect(() => {
     const fetchFeaturedProperties = async () => {
       try {
-        let properties = [];
+        let properties: Property[] = [];
         
         try {
           const propertyService = await import('@/lib/propertyService');
-          properties = await propertyService.default.getProperties();
+          const allProperties = await propertyService.default.getProperties();
+          // Filter and map properties to match our Property interface
+          properties = allProperties
+            .filter((prop: any) => prop.type === 'sale' || prop.type === 'rent')
+            .map((prop: any): Property => ({
+              _id: prop._id,
+              title: prop.title,
+              location: prop.location,
+              price: prop.price,
+              type: prop.type as 'sale' | 'rent',
+              bedrooms: prop.bedrooms,
+              bathrooms: prop.bathrooms,
+              area: prop.area,
+              image: prop.image
+            }));
         } catch (serviceError) {
           console.log('Property service not available, using mock data');
           properties = mockProperties;
@@ -83,7 +110,8 @@ const Footer = () => {
     fetchFeaturedProperties();
   }, []);
 
-  const formatPrice = (price) => {
+  // Fix the formatPrice function with proper typing
+  const formatPrice = (price: string | number): string => {
     if (typeof price === 'string') return price;
     if (typeof price === 'number') return price.toLocaleString();
     return 'Contact for Price';

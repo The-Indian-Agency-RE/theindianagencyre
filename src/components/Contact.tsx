@@ -68,7 +68,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
-                  rows="5"
+                  rows={5}
                   className="w-full border border-slate-300 px-4 py-3 text-slate-900 focus:outline-none focus:border-slate-500 transition-colors resize-none"
                   placeholder="How can we help you with your property needs?"
                 />
