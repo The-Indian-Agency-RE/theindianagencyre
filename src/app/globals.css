@@ -1,26 +1,16 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  font-family: 'Newsreader', sans-serif;
+}
+/* Prevent Leaflet map from overlapping navbar */
+.leaflet-container {
+  z-index: 0 !important;
 }
 
-@theme inline {
-  --color-background: var(--foreground);
-  --color-foreground: var(--background);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ededed;
-    --foreground: #0a0a0a;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.navbar {
+  z-index: 1000 !important;
+  position: relative;
 }

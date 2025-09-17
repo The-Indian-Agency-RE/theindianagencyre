@@ -1,12 +1,12 @@
 import Navbar from '@/components/Navbar';
-import Buy from '@/components/Buy';
+import Login from '@/components/Login';
 import Footer from '@/components/Footer';
 
-export default function BuyPage() {
+export default function LoginPage() {
   return (
     <>
       <Navbar />
-      <Buy />
+      <Login />
       <Footer />
     </>
   );

@@ -1,12 +1,12 @@
 import Navbar from '@/components/Navbar';
-import Buy from '@/components/Buy';
+import Rent from '@/components/Rent';
 import Footer from '@/components/Footer';
 
-export default function BuyPage() {
+export default function RentPage() {
   return (
     <>
       <Navbar />
-      <Buy />
+      <Rent />
       <Footer />
     </>
   );

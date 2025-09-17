@@ -1,12 +1,12 @@
 import Navbar from '@/components/Navbar';
-import Buy from '@/components/Buy';
+import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
-export default function BuyPage() {
+export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <Buy />
+      <Contact />
       <Footer />
     </>
   );

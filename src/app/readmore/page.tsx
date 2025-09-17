@@ -1,12 +1,12 @@
 import Navbar from '@/components/Navbar';
-import Buy from '@/components/Buy';
+import Readmore from '@/components/Readmore';
 import Footer from '@/components/Footer';
 
-export default function BuyPage() {
+export default function ReadmorePage() {
   return (
     <>
       <Navbar />
-      <Buy />
+      <Readmore />
       <Footer />
     </>
   );

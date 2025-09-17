@@ -1,12 +1,12 @@
 import Navbar from '@/components/Navbar';
-import Buy from '@/components/Buy';
+import AllProperties from '@/components/AllProperties';
 import Footer from '@/components/Footer';
 
-export default function BuyPage() {
+export default function AllPropertiesPage() {
   return (
     <>
       <Navbar />
-      <Buy />
+      <AllProperties />
       <Footer />
     </>
   );
